@@ -17,7 +17,7 @@ This proposal requests a grant to fund the design, implementation, security audi
 
 The grant bundles three tightly coupled workstreams into a single proposal:
 
-1. **OpenZeppelin Reference Implementations for Canton**: 8 production-ready, end-to-end blueprints (4 per year) targeting strategic DeFi and institutional use cases, each including working reference code, architecture documentation, demo front-end, and threat models.  
+1. **OpenZeppelin Reference Implementations for Canton**: 7 production-ready, end-to-end blueprints (3 in Year 1, 4 in Year 2) targeting strategic DeFi and institutional use cases, each including working reference code, architecture documentation, demo front-end, and threat models.  
 2. **OpenZeppelin Contracts Library for Canton**: A secure, audited, and standardized Daml contracts library providing the same role as OpenZeppelin Contracts for Solidity: the trusted foundation developers import when building applications. The library roadmap feeds directly from the needs and use cases that arise from the Reference Implementations, ensuring every primitive is battle-tested in a real application before release. Includes Contracts Wizard integration, AI development tools, and comprehensive documentation.  
 3. **Security Audits**: Dedicated security capacity covering smart contract audits of all OpenZeppelin-produced library code and Reference Implementation code, ensuring every release meets OpenZeppelin's established security standards.
 
@@ -97,7 +97,7 @@ The Reference Implementations and the Contracts Library are designed to reinforc
 
 By working on strategic DeFi use cases for Reference Implementations in parallel with the library, we continuously adjust our library roadmap to bring to Daml the primitives that will accelerate DeFi and TradFi teams. At the same time, we provide active feedback and collaborate to improve Digital Asset tools and solutions integrated into our Reference Implementations.
 
-### Workstream A: Reference Implementations (8 total, 4 per year)
+### Workstream A: Reference Implementations (7 total, 3 in Year 1 and 4 in Year 2)
 
 OpenZeppelin Reference Implementations are the next evolution of OpenZeppelin standards. They are specifically designed to target critical bottlenecks that both financial institutions and DeFi teams face when trying to integrate or migrate to Canton.
 
@@ -120,11 +120,12 @@ As needed, Reference Implementations will also include **FI Evaluation Guides** 
      
 2. **Lending Protocol**: End-to-end blueprint for a lending protocol adapted for Canton's architecture and privacy considerations, built around vaults as the core primitive, with vault features designed to integrate with established or new standards in the Canton ecosystem including credential and attestation systems. This allows the lending protocol to serve both crypto-native DeFi users and institutional participants who require compliance controls. The implementation may also explore multi-party attestation patterns, where the vault issuer is multiply attested. OpenZeppelin brings direct experience implementing [tokenized vault standards](https://docs.openzeppelin.com/impact/tokenization-and-real-world-assets#tokenized-vaults) and RWA-backed lending infrastructure across multiple ecosystems, including [ERC-4626 on Ethereum](https://docs.openzeppelin.com/contracts/5.x/erc4626), [SEP-56 on Stellar](https://docs.openzeppelin.com/stellar-contracts/tokens/vault/vault), and [equivalent implementations on Starknet](https://docs.openzeppelin.com/contracts-cairo/2.x/erc4626), as well as deep expertise in lending protocol security through long-standing partnerships such as [Compound](https://blog.openzeppelin.com/compound-comprehensive-protocol-audit).  
      
-3. **Cross-Chain Stablecoin Payment Orchestration**: End-to-end blueprint for stablecoin payment orchestration on Canton, enabling users holding stablecoins on other chains to transact and settle privately on Canton without exposing payment details. The reference implementation will demonstrate cross-chain settlement workflows leveraging Canton's privacy guarantees, integrating with existing stablecoin infrastructure in the Canton ecosystem (e.g., [USDCx](https://docs.digitalasset.com/integrate/devnet/usdcx-support/index.html)), and complementing Canton's growing institutional stablecoin ecosystem. The cross-chain components will build on the Standardized Messaging Gateway from our Contracts Library, with integration points for compliance controls via Credentials and Claims. OpenZeppelin brings direct experience working with cross-chain interoperability providers including Chainlink and LayerZero, and will collaborate with Canton ecosystem partners to ensure compatibility.  
-     
-4. **Confidential Auction Launchpad**: End-to-end blueprint for a confidential auction launchpad on Canton, enabling ICOs and token distribution workflows where bids, allocations, and settlement details are visible only to the relevant parties. The reference implementation will initially focus on sealed-bid token auctions, with a design that supports additional on-chain launch mechanisms over time. The implementation will include integration points for controlled participant access, credentials, and policy checks where needed for regulated or institution-facing distributions.
+3. **Confidential Auction Launchpad**: End-to-end blueprint for a confidential auction launchpad on Canton, enabling ICOs and token distribution workflows where bids, allocations, and settlement details are visible only to the relevant parties. The reference implementation will initially focus on sealed-bid token auctions, with a design that supports additional on-chain launch mechanisms over time. The implementation will include integration points for controlled participant access, credentials, and policy checks where needed for regulated or institution-facing distributions.
 
-**Year 2 Reference Implementations** will be defined through the 12-month scope review in collaboration with Canton Foundation, Digital Asset, relevant ecosystem partners, and the wider community.
+**Year 2 Reference Implementations**: the first Year 2 Reference Implementation is defined now. The other three will be defined through the 12-month scope review in collaboration with Canton Foundation, Digital Asset, relevant ecosystem partners, and the wider community.
+
+4. **Cross-Chain Stablecoin Payment Orchestration**: End-to-end blueprint for stablecoin payment orchestration on Canton, enabling users holding stablecoins on other chains to transact and settle privately on Canton without exposing payment details. The reference implementation will demonstrate cross-chain settlement workflows leveraging Canton's privacy guarantees, integrating with existing stablecoin infrastructure in the Canton ecosystem (e.g., [USDCx](https://docs.digitalasset.com/integrate/devnet/usdcx-support/index.html)), and complementing Canton's growing institutional stablecoin ecosystem. The cross-chain components will build on the Standardized Messaging Gateway from our Contracts Library, with integration points for compliance controls via Credentials and Claims. OpenZeppelin brings direct experience working with cross-chain interoperability providers including Chainlink and LayerZero, and will collaborate with Canton ecosystem partners to ensure compatibility.
+
 
 ### Open Source Tooling Integration and Ecosystem Collaboration
 
@@ -163,7 +164,6 @@ OpenZeppelin will provide additional library components for other features requi
 - **Roles Based Access Control**: Necessary for swap/lending controls.  
 - **Timelock and Pause**: Useful for security controls.  
 - **Nonfungible Tokens**: Used for transferable loan positions.  
-- **Modular Multi-Sig Accounts**: Necessary for external DeFi users (LPs and borrowers). We will review existing accounts and wallet implementations (such as the Splice Wallet Kernel) to ensure compatibility and avoid duplication by leveraging existing components whenever possible.  
 - **Credentials and Claims**: Necessary for compliance checks on external DeFi users.  
 - **Standardized Messaging Gateway**: Useful to add multi-chain support compatible with any of Chainlink, LayerZero, Wormhole, etc.  
 - **DeFi Math Library**: Reusable math primitives and financial abstractions for DeFi and institutional applications.  
@@ -189,6 +189,8 @@ OpenZeppelin will dedicate **55 researcher-weeks of security capacity** over 24 
 - **Penetration Testing**: Simulated real-world attacks against Reference Implementation deployments, covering application-level and infrastructure-level attack surfaces.  
 - **Continuous Coverage and AI-Security Agent**: Audits amplified by OpenZeppelin's AI security agent, integrated directly into the audit workflow as a supervised accelerator. The AI agent continuously analyzes the codebase, highlights high-risk patterns, validates invariants, and surfaces architectural risks before and between formal audit cycles, with all findings reviewed and validated by OpenZeppelin auditors.  
 - **Immunefi Bug Bounty**: Assistance to establish and manage a bug bounty program (OpenZeppelin will fund bounty payouts at the same levels as our standard OpenZeppelin Contracts bug bounty program).
+
+Security reviews and penetration tests of a Reference Implementation are delivered in the milestone after the one that delivers the Reference Implementation, in the same way as the security audits. They then cover the completed code. The Reference Implementation of the final milestone is reviewed and tested in that milestone.
 
 This security capacity is scoped to OpenZeppelin-produced code. All security findings and reports will be published alongside the audited releases.
 
@@ -301,7 +303,6 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 **Security:**
 
 - Security audits of Milestone 1 library code (audit report published)  
-- Security reviews and penetration tests of DEX Reference Implementation  
 - Continuous coverage and AI-Security Agent
 
 **Developer Enablement (included):**
@@ -337,7 +338,6 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 **Contracts Library:**
 
 - Nonfungible Tokens  
-- Modular Multi-Sig Accounts  
 - Credentials and Claims  
 - OpenZeppelin Contracts Wizard, UI Builder, and Documentation for Canton  
 - AI-Enhanced Development Tools for Canton (MCP Server, AI Skills, Claude Plugin)
@@ -345,7 +345,7 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 **Security:**
 
 - Security audits of Milestone 2 deliverables (audit report published)  
-- Security reviews and penetration tests of Lending Reference Implementation  
+- Security reviews and penetration tests of DEX Reference Implementation (delivered in Milestone 2)  
 - Continuous coverage and AI-Security Agent
 
 **Developer Enablement (included):**
@@ -357,7 +357,7 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 - Lending Protocol Reference Implementation demonstrable on LocalNet/DevNet: vault creation, deposit/withdrawal, borrow/repay, and credential-gated compliance.  
 - Demo front-end functional for core lending flows.  
-- NFT, Multi-Sig, and Credentials library components pass \>90% code coverage with full CI integration.  
+- NFT and Credentials library components pass \>90% code coverage with full CI integration.  
 - Contracts Wizard generates valid Canton Daml contract code for token and vault configurations.  
 - AI tools (MCP Server) return correct library component usage patterns for Canton-specific queries.  
 - Canton Network section on OpenZeppelin Documentation is comprehensive for all released library components.  
@@ -366,29 +366,28 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 ---
 
-## Milestone 4: Cross-Chain and Auction RIs, Year 1 Adoption
+## Milestone 4: Auction Reference Implementation, Year 1 Adoption
 
 | Field | Value |
 | :---- | :---- |
 | **Estimated Delivery** | Quarter 4: 14 February to 13 May 2027 (End of Year 1\) |
 | **Submission Date** | 13 May 2027 |
-| **Focus** | Final Year 1 Reference Implementations, cross-chain library, and Year 1 adoption proof |
+| **Focus** | Final Year 1 Reference Implementation, auction library, and Year 1 adoption proof |
 
 **Reference Implementations:**
 
-- **Reference Implementation 3: Cross-Chain Stablecoin Payment Orchestration**: Working reference code, architecture documentation, demo front-end, and threat model.  
-- **Reference Implementation 4: Confidential Auction Launchpad**: Working reference code, architecture documentation, demo front-end, and threat model.  
+- **Reference Implementation 3: Confidential Auction Launchpad**: Working reference code, architecture documentation, demo front-end, and threat model.  
 - **12-Month Scope Review**: Joint review with Canton Foundation to align Year 2 roadmap.
 
 **Contracts Library:**
 
-- Standardized Messaging Gateway  
+- Token Auctions  
 - Other Standard Implementations (to be determined per evolving roadmap)
 
 **Security:**
 
 - Security audits of Milestone 3 deliverables (audit report published)  
-- Security reviews and penetration tests of Cross-Chain and Auction Reference Implementations  
+- Security reviews and penetration tests of Lending Reference Implementation (delivered in Milestone 3)  
 - Continuous coverage and AI-Security Agent
 
 **Developer Enablement (included):**
@@ -399,9 +398,8 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 **Delivery Acceptance Criteria:**
 
-- Cross-Chain Stablecoin RI demonstrable on LocalNet/DevNet: cross-chain settlement workflow with privacy guarantees, integrating with USDCx or equivalent Canton stablecoin infrastructure.  
 - Confidential Auction RI demonstrable on LocalNet/DevNet: sealed-bid auction with allocation and settlement visible only to relevant parties.  
-- Messaging Gateway library component supports at least one cross-chain messaging provider integration.  
+- Token Auctions library components pass \>90% code coverage with full CI integration.  
 - M3 security audit report published with all critical and high findings resolved.  
 - 12-Month Scope Review completed with Year 2 roadmap published and agreed upon with Canton Foundation.
 
@@ -416,27 +414,27 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 ---
 
-## Milestone 5: Reference Implementation 5 and Extended Library
+## Milestone 5: Cross-Chain Reference Implementation and Messaging Gateway
 
 | Field | Value |
 | :---- | :---- |
 | **Estimated Delivery** | Quarter 5: 14 May to 13 August 2027 |
 | **Submission Date** | 13 August 2027 |
-| **Focus** | First Year 2 Reference Implementation and extended library components |
+| **Focus** | First Year 2 Reference Implementation and cross-chain library |
 
 **Reference Implementations:**
 
-- **Reference Implementation 5** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 4: Cross-Chain Stablecoin Payment Orchestration**: Working reference code, architecture documentation, demo front-end, and threat model.
 
 **Contracts Library:**
 
-- Staking Contracts  
+- Standardized Messaging Gateway  
 - Additional Canton Standards (to be determined per Year 2 roadmap)
 
 **Security:**
 
 - Security audits of Milestone 4 deliverables (audit report published)  
-- Security reviews and penetration tests  
+- Security reviews and penetration tests of Auction Reference Implementation (delivered in Milestone 4)  
 - Continuous coverage and AI-Security Agent
 
 **Developer Enablement (included):**
@@ -446,14 +444,14 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Acceptance Criteria:**
 
-- RI 5 demonstrable on LocalNet/DevNet with functional demo front-end.  
-- Staking library components pass \>90% code coverage with full CI integration.  
+- Cross-Chain Stablecoin RI demonstrable on LocalNet/DevNet: cross-chain settlement workflow with privacy guarantees, integrating with USDCx or equivalent Canton stablecoin infrastructure.  
+- Messaging Gateway library component supports at least one cross-chain messaging provider integration.  
 - M4 security audit report published with all critical and high findings resolved.  
 - At least 1 independent Canton developer has reviewed new library components (written confirmation).
 
 ---
 
-## Milestone 6: Reference Implementation 6 and Token Utilities
+## Milestone 6: Reference Implementation 5 and Token Utilities
 
 | Field | Value |
 | :---- | :---- |
@@ -463,18 +461,18 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 6** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 5** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
 
 **Contracts Library:**
 
+- Staking Contracts  
 - Vesting Contracts  
-- Token Auctions  
 - Other Open Source Developer Adoption Tools as needed per Year 2 roadmap
 
 **Security:**
 
 - Security audits of Milestone 5 deliverables (audit report published)  
-- Security reviews and penetration tests  
+- Security reviews and penetration tests of Cross-Chain Reference Implementation (delivered in Milestone 5)  
 - Continuous coverage and AI-Security Agent
 
 **Developer Enablement (included):**
@@ -485,13 +483,13 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Acceptance Criteria:**
 
-- RI 6 demonstrable on LocalNet/DevNet with functional demo front-end.  
-- Vesting and Token Auctions library components pass \>90% code coverage with full CI integration.  
+- RI 5 demonstrable on LocalNet/DevNet with functional demo front-end.  
+- Staking and Vesting library components pass \>90% code coverage with full CI integration.  
 - M5 security audit report published with all critical and high findings resolved.
 
 ---
 
-## Milestone 7: Reference Implementation 7 and Additional Standards
+## Milestone 7: Reference Implementation 6 and Additional Standards
 
 | Field | Value |
 | :---- | :---- |
@@ -501,7 +499,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 7** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 6** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
 
 **Contracts Library:**
 
@@ -510,7 +508,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 **Security:**
 
 - Security audits of Milestone 6 deliverables (audit report published)  
-- Security reviews and penetration tests  
+- Security reviews and penetration tests of Reference Implementation 5 (delivered in Milestone 6)  
 - Continuous coverage and AI-Security Agent
 
 **Developer Enablement (included):**
@@ -520,7 +518,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Acceptance Criteria:**
 
-- RI 7 demonstrable on LocalNet/DevNet with functional demo front-end.  
+- RI 6 demonstrable on LocalNet/DevNet with functional demo front-end.  
 - Any new library components pass \>90% code coverage with full CI integration.  
 - M6 security audit report published with all critical and high findings resolved.
 
@@ -536,7 +534,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 8** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 7** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
 
 **Contracts Library:**
 
@@ -545,7 +543,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 **Security:**
 
 - Security audits of Milestone 7 deliverables (audit report published)  
-- Security reviews and penetration tests  
+- Security reviews and penetration tests of Reference Implementation 6 (delivered in Milestone 7) and Reference Implementation 7  
 - Final security audit and documentation polish across the full library and RI codebase  
 - Continuous coverage and AI-Security Agent
 
@@ -557,7 +555,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Delivery Acceptance Criteria:**
 
-- RI 8 demonstrable on LocalNet/DevNet with functional demo front-end.  
+- RI 7 demonstrable on LocalNet/DevNet with functional demo front-end.  
 - M7 security audit report published with all critical and high findings resolved.  
 - Full library documentation is complete, current, and published on OpenZeppelin Documentation.  
 - All library code and Reference Implementation code is publicly available under MIT license. All OpenZeppelin tooling code is publicly available under AGPL 3.0 license.
@@ -621,13 +619,13 @@ The Tech & Ops Committee will evaluate completion of each milestone based on:
 | Milestone | Reference Implementations | Contracts Library | Security | Dev Enablement | Subtotal | % of Total | Trigger |
 | :---- | :---- | :---- | :---- | :---- | :---: | :---: | :---- |
 | **M1** (Q1) | Research and Design | CIP-56, CIP-86, CIP-103, CIP-104 | Audits, Continuous Coverage | Included | 2,128,378 CC | 7.5% | Committee acceptance |
-| **M2** (Q2) | RI 1: DEX | Vaults, Hooks, RBAC, Timelock/Pause | Audits, Reviews, Pen Tests | Included | 2,128,378 CC | 7.5% | Committee acceptance |
-| **M3** (Q3) | RI 2: Lending | NFTs, Multi-Sig, Credentials, Wizard, AI Tools | Audits, Reviews, Pen Tests | Included | 2,128,378 CC | 7.5% | Committee acceptance |
-| **M4** (Q4, End Y1) | RI 3: Cross-Chain, RI 4: Auction | Messaging Gateway, Additional Standards | Audits, Reviews, Pen Tests | Included | 7,804,054 CC | 7.5%(Delivery)<br>20% (Adoption) | Committee acceptance AND adoption criteria |
-| **M5** (Q5) | RI 5 (TBD) | Staking, Additional Standards | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
-| **M6** (Q6) | RI 6 (TBD) | Vesting, Auctions, Developer Tools | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
-| **M7** (Q7) | RI 7 (TBD) | Additional Standards | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
-| **M8** (Q8, End Y2) | RI 8 (TBD) | Additional Standards | Audits, Reviews, Pen Tests | Included | 9,932,433 CC | 5%(Delivery)<br>30% (Adoption) | Committee acceptance AND adoption criteria |
+| **M2** (Q2) | RI 1: DEX | Vaults, Hooks, RBAC, Timelock/Pause | Audits, Continuous Coverage | Included | 2,128,378 CC | 7.5% | Committee acceptance |
+| **M3** (Q3) | RI 2: Lending | NFTs, Credentials, Wizard, AI Tools | Audits, Reviews, Pen Tests | Included | 2,128,378 CC | 7.5% | Committee acceptance |
+| **M4** (Q4, End Y1) | RI 3: Auction | Token Auctions, Additional Standards | Audits, Reviews, Pen Tests | Included | 7,804,054 CC | 7.5%(Delivery)<br>20% (Adoption) | Committee acceptance AND adoption criteria |
+| **M5** (Q5) | RI 4: Cross-Chain | Messaging Gateway, Additional Standards | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
+| **M6** (Q6) | RI 5 (TBD) | Staking, Vesting, Developer Tools | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
+| **M7** (Q7) | RI 6 (TBD) | Additional Standards | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
+| **M8** (Q8, End Y2) | RI 7 (TBD) | Additional Standards | Audits, Reviews, Pen Tests | Included | 9,932,433 CC | 5%(Delivery)<br>30% (Adoption) | Committee acceptance AND adoption criteria |
 
 **Payment Weighting by Year:** Year 1 is weighted 60% delivery / 40% adoption. Year 2 is weighted 40% delivery / 60% adoption. Overall split across the full engagement is 50% delivery / 50% adoption.
 
@@ -702,7 +700,7 @@ With a growing customer base that includes Uniswap, DTCC, and WisdomTree, and as
 
 ## Why 24 Months
 
-Building a comprehensive contracts library and 8 Reference Implementations is a multi-year undertaking. Our experience across other ecosystems (Ethereum, Starknet, Stellar) shows that Year 1 is primarily build and establish, while Year 2 is when adoption compounds as the library reaches critical mass. The 12-month scope review and no-fault termination provide the Foundation with clear off-ramps if priorities change.
+Building a comprehensive contracts library and 7 Reference Implementations is a multi-year undertaking. Our experience across other ecosystems (Ethereum, Starknet, Stellar) shows that Year 1 is primarily build and establish, while Year 2 is when adoption compounds as the library reaches critical mass. The 12-month scope review and no-fault termination provide the Foundation with clear off-ramps if priorities change.
 
 ---
 
