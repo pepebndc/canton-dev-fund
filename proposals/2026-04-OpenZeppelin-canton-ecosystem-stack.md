@@ -572,7 +572,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 The Canton Foundation and Digital Asset will continue to facilitate introductions to new and existing ecosystem teams throughout Year 2\.             
 
 - At least **17 additional independent Canton projects** (20 cumulative) have imported or integrated OpenZeppelin Contracts Library components, confirmed via written attestations or verifiable on-chain/repository evidence.  
-- At least **7 external adoption events across the Reference Implementation portfolio**, where a fork, deployment, or use as a foundation by an external team each count as one event, confirmed via public repository evidence or written attestations. Events may be distributed unevenly across RIs, reflecting that some use cases attract broader adoption than others.  
+- At least **8 external adoption events across the Reference Implementation portfolio**, where a fork, deployment, or use as a foundation by an external team each count as one event, confirmed via public repository evidence or written attestations. Events may be distributed unevenly across RIs, reflecting that some use cases attract broader adoption than others.  
 - Published Year 2 Adoption Report documenting cumulative usage, ecosystem feedback, and measurable impact.
 
 ---
