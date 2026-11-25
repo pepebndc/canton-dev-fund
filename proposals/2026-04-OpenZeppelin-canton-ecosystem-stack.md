@@ -339,7 +339,7 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 - Nonfungible Tokens  
 - Credentials and Claims  
-- OpenZeppelin Contracts Wizard, UI Builder, and Documentation for Canton  
+- OpenZeppelin Contracts Wizard and Documentation for Canton  
 - AI-Enhanced Development Tools for Canton (MCP Server, AI Skills, Claude Plugin)
 
 **Security:**
@@ -377,12 +377,12 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 **Reference Implementations:**
 
 - **Reference Implementation 3: Confidential Auction Launchpad**: Working reference code, architecture documentation, demo front-end, and threat model.  
-- **12-Month Scope Review**: Joint review with Canton Foundation to align Year 2 roadmap.
+- **12-Month Scope Review**: Joint review with Canton Foundation to align Year 2 roadmap, held in March or April 2027.  
+- **Cross-Chain Reference Implementation design**: Messaging Gateway design, choice of the cross-chain messaging provider, and a USDCx integration spike, approved by the Canton Foundation before the Milestone 5 build starts.
 
 **Contracts Library:**
 
-- Token Auctions  
-- Other Standard Implementations (to be determined per evolving roadmap)
+- Token Auctions
 
 **Security:**
 
@@ -401,7 +401,8 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 - Confidential Auction RI demonstrable on LocalNet/DevNet: sealed-bid auction with allocation and settlement visible only to relevant parties.  
 - Token Auctions library components pass \>90% code coverage with full CI integration.  
 - M3 security audit report published with all critical and high findings resolved.  
-- 12-Month Scope Review completed with Year 2 roadmap published and agreed upon with Canton Foundation.
+- 12-Month Scope Review completed by 30 April 2027, with Year 2 roadmap published and agreed upon with Canton Foundation.  
+- Messaging Gateway design and messaging provider choice approved by the Canton Foundation, and USDCx integration spike report published.
 
 **Adoption Criteria (Year 1):**
 
@@ -424,12 +425,12 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 4: Cross-Chain Stablecoin Payment Orchestration**: Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 4: Cross-Chain Stablecoin Payment Orchestration**: Working reference code, architecture documentation, demo front-end, and threat model, built on the design approved in Milestone 4.  
+- **Reference Implementation 5 specification**: Architecture document for the use case defined during the 12-Month Scope Review.
 
 **Contracts Library:**
 
-- Standardized Messaging Gateway  
-- Additional Canton Standards (to be determined per Year 2 roadmap)
+- Standardized Messaging Gateway
 
 **Security:**
 
@@ -446,6 +447,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 - Cross-Chain Stablecoin RI demonstrable on LocalNet/DevNet: cross-chain settlement workflow with privacy guarantees, integrating with USDCx or equivalent Canton stablecoin infrastructure.  
 - Messaging Gateway library component supports at least one cross-chain messaging provider integration.  
+- RI 5 specification approved by the Canton Foundation.  
 - M4 security audit report published with all critical and high findings resolved.  
 - At least 1 independent Canton developer has reviewed new library components (written confirmation).
 
@@ -461,13 +463,14 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 5** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 5** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model, built on the specification approved in Milestone 5.  
+- **Reference Implementation 6 specification**: Architecture document for the use case defined during the 12-Month Scope Review.
 
 **Contracts Library:**
 
 - Staking Contracts  
 - Vesting Contracts  
-- Other Open Source Developer Adoption Tools as needed per Year 2 roadmap
+- UI Builder for Canton
 
 **Security:**
 
@@ -484,7 +487,9 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 **Acceptance Criteria:**
 
 - RI 5 demonstrable on LocalNet/DevNet with functional demo front-end.  
+- RI 6 specification approved by the Canton Foundation.  
 - Staking and Vesting library components pass \>90% code coverage with full CI integration.  
+- UI Builder for Canton released and documented on OpenZeppelin Documentation.  
 - M5 security audit report published with all critical and high findings resolved.
 
 ---
@@ -499,11 +504,12 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 6** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 6** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model, built on the specification approved in Milestone 6.  
+- **Reference Implementation 7 specification**: Architecture document for the use case defined during the 12-Month Scope Review.
 
 **Contracts Library:**
 
-- Additional Canton Standards (to be determined per Year 2 roadmap)
+- Additional Canton Standards: up to 3 in total across Milestones 7 and 8, named at the 12-Month Scope Review
 
 **Security:**
 
@@ -519,6 +525,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 **Acceptance Criteria:**
 
 - RI 6 demonstrable on LocalNet/DevNet with functional demo front-end.  
+- RI 7 specification approved by the Canton Foundation.  
 - Any new library components pass \>90% code coverage with full CI integration.  
 - M6 security audit report published with all critical and high findings resolved.
 
@@ -534,11 +541,11 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 **Reference Implementations:**
 
-- **Reference Implementation 7** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model.
+- **Reference Implementation 7** (use case defined during 12-Month Scope Review): Working reference code, architecture documentation, demo front-end, and threat model, built on the specification approved in Milestone 7.
 
 **Contracts Library:**
 
-- Additional Canton Standards (to be determined per Year 2 roadmap)
+- Additional Canton Standards: up to 3 in total across Milestones 7 and 8, named at the 12-Month Scope Review
 
 **Security:**
 
@@ -565,7 +572,7 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 The Canton Foundation and Digital Asset will continue to facilitate introductions to new and existing ecosystem teams throughout Year 2\.             
 
 - At least **17 additional independent Canton projects** (20 cumulative) have imported or integrated OpenZeppelin Contracts Library components, confirmed via written attestations or verifiable on-chain/repository evidence.  
-- At least **8 external adoption events across the Reference Implementation portfolio**, where a fork, deployment, or use as a foundation by an external team each count as one event, confirmed via public repository evidence or written attestations. Events may be distributed unevenly across RIs, reflecting that some use cases attract broader adoption than others.  
+- At least **7 external adoption events across the Reference Implementation portfolio**, where a fork, deployment, or use as a foundation by an external team each count as one event, confirmed via public repository evidence or written attestations. Events may be distributed unevenly across RIs, reflecting that some use cases attract broader adoption than others.  
 - Published Year 2 Adoption Report documenting cumulative usage, ecosystem feedback, and measurable impact.
 
 ---
@@ -621,11 +628,11 @@ The Tech & Ops Committee will evaluate completion of each milestone based on:
 | **M1** (Q1) | Research and Design | CIP-56, CIP-86, CIP-103, CIP-104 | Audits, Continuous Coverage | Included | 2,128,378 CC | 7.5% | Committee acceptance |
 | **M2** (Q2) | RI 1: DEX | Vaults, Hooks, RBAC, Timelock/Pause | Audits, Continuous Coverage | Included | 2,128,378 CC | 7.5% | Committee acceptance |
 | **M3** (Q3) | RI 2: Lending | NFTs, Credentials, Wizard, AI Tools | Audits, Reviews, Pen Tests | Included | 2,128,378 CC | 7.5% | Committee acceptance |
-| **M4** (Q4, End Y1) | RI 3: Auction | Token Auctions, Additional Standards | Audits, Reviews, Pen Tests | Included | 7,804,054 CC | 7.5%(Delivery)<br>20% (Adoption) | Committee acceptance AND adoption criteria |
-| **M5** (Q5) | RI 4: Cross-Chain | Messaging Gateway, Additional Standards | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
-| **M6** (Q6) | RI 5 (TBD) | Staking, Vesting, Developer Tools | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
-| **M7** (Q7) | RI 6 (TBD) | Additional Standards | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
-| **M8** (Q8, End Y2) | RI 7 (TBD) | Additional Standards | Audits, Reviews, Pen Tests | Included | 9,932,433 CC | 5%(Delivery)<br>30% (Adoption) | Committee acceptance AND adoption criteria |
+| **M4** (Q4, End Y1) | RI 3: Auction, Cross-Chain design, Scope Review | Token Auctions | Audits, Reviews, Pen Tests | Included | 7,804,054 CC | 7.5%(Delivery)<br>20% (Adoption) | Committee acceptance AND adoption criteria |
+| **M5** (Q5) | RI 4: Cross-Chain, RI 5 spec | Messaging Gateway | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
+| **M6** (Q6) | RI 5 (TBD), RI 6 spec | Staking, Vesting, UI Builder | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
+| **M7** (Q7) | RI 6 (TBD), RI 7 spec | Additional Standards (up to 3 across M7 and M8) | Audits, Reviews, Pen Tests | Included | 1,418,919 CC | 5% | Committee acceptance |
+| **M8** (Q8, End Y2) | RI 7 (TBD) | Additional Standards (up to 3 across M7 and M8) | Audits, Reviews, Pen Tests | Included | 9,932,433 CC | 5%(Delivery)<br>30% (Adoption) | Committee acceptance AND adoption criteria |
 
 **Payment Weighting by Year:** Year 1 is weighted 60% delivery / 40% adoption. Year 2 is weighted 40% delivery / 60% adoption. Overall split across the full engagement is 50% delivery / 50% adoption.
 
@@ -653,7 +660,7 @@ OpenZeppelin will issue an invoice on the first day of each calendar quarter for
 
 ## 12-Month Scope Review and Termination Provisions
 
-- **12-Month Scope Review:** At the end of Quarter 4, OpenZeppelin and the Canton Foundation will conduct a joint review to align Year 2 priorities with evolving ecosystem needs. Year 2 Reference Implementation topics and any library roadmap adjustments will be agreed upon before Year 2 work begins.  
+- **12-Month Scope Review:** In March or April 2027, during Quarter 4, OpenZeppelin and the Canton Foundation will conduct a joint review to align Year 2 priorities with evolving ecosystem needs. Year 2 Reference Implementation topics and any library roadmap adjustments will be agreed upon before Year 2 work begins.  
 - **No-Fault Termination:** The Foundation maintains the right to terminate the engagement at the end of any quarterly performance period or at the 12-month mark should strategic priorities shift. In this case, OpenZeppelin is compensated for all accepted milestones to date.  
 - **Termination for Breach:** The Foundation may invoke termination if OpenZeppelin fails to remedy a material breach within fifteen (15) business days after receipt of written notice.
 
