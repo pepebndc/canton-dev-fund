@@ -13,7 +13,7 @@
 
 # Abstract
 
-This proposal requests a grant to fund the design, implementation, security audit, and ecosystem adoption of a comprehensive open-source development stack for Canton, delivered over 24 months in quarterly milestones.
+This proposal requests a grant to fund the design, implementation, security audit, and ecosystem adoption of a comprehensive open-source development stack for Canton, delivered in eight quarterly milestones from May 2026 to June 2028.
 
 The grant bundles three tightly coupled workstreams into a single proposal:
 
@@ -182,7 +182,7 @@ Additional library components may include contract types that are difficult or n
 
 ### Workstream C: Security Audits
 
-OpenZeppelin will dedicate **55 researcher-weeks of security capacity** over 24 months, covering:
+OpenZeppelin will dedicate **55 researcher-weeks of security capacity** over the engagement, covering:
 
 - **Smart Contract Security Audits**: Line-by-line review of all OpenZeppelin-produced Daml smart contract code across the Contracts Library and Reference Implementations, identifying vulnerabilities, logic errors, and security flaws before each release.  
 - **Security Reviews**: Full-stack security assessments of each Reference Implementation, evaluating on-chain smart contracts alongside off-chain backend systems and front-end interfaces.  
@@ -236,14 +236,14 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 # Milestones and Deliverables
 
-**Engagement start.** Proposal was accepted on May 13th 2026. Delivery work began on 14 May 2026. The milestone submission dates below reflect this start date.
+**Engagement start.** Proposal was accepted on May 13th 2026. Delivery work began on 14 May 2026. Milestone 1 was submitted on 30 October 2026. Milestone 2 work started in October 2026, while Milestone 1 was in review. From Milestone 3, each window is one calendar quarter. The milestone submission dates below reflect this schedule.
 
 ## Milestone 1: Token Foundation and dApp Framework
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 1: 14 May to 13 August 2026 |
-| **Submission Date** | 13 August 2026 |
+| **Estimated Delivery** | Quarter 1: 14 May to 30 October 2026 |
+| **Submission Date** | 30 October 2026 |
 | **Focus** | Foundational library components and Reference Implementation research |
 
 **Reference Implementations:**
@@ -285,8 +285,8 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 2: 14 August to 13 November 2026 |
-| **Submission Date** | 13 November 2026 |
+| **Estimated Delivery** | Quarter 2: 1 October to 31 December 2026 |
+| **Submission Date** | 31 December 2026 |
 | **Focus** | First Reference Implementation and DeFi-enabling library components |
 
 **Reference Implementations:**
@@ -327,8 +327,8 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 3: 14 November 2026 to 13 February 2027 |
-| **Submission Date** | 13 February 2027 |
+| **Estimated Delivery** | Quarter 3: 1 January to 31 March 2027 |
+| **Submission Date** | 31 March 2027 |
 | **Focus** | Second Reference Implementation, lending-enabling library components, and developer tooling |
 
 **Reference Implementations:**
@@ -370,14 +370,14 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 4: 14 February to 13 May 2027 (End of Year 1\) |
-| **Submission Date** | 13 May 2027 |
+| **Estimated Delivery** | Quarter 4: 1 April to 30 June 2027 (End of Year 1\) |
+| **Submission Date** | 30 June 2027 |
 | **Focus** | Final Year 1 Reference Implementation, auction library, and Year 1 adoption proof |
 
 **Reference Implementations:**
 
 - **Reference Implementation 3: Confidential Auction Launchpad**: Working reference code, architecture documentation, demo front-end, and threat model.  
-- **12-Month Scope Review**: Joint review with Canton Foundation to align Year 2 roadmap, held in March or April 2027.  
+- **12-Month Scope Review**: Joint review with Canton Foundation to align Year 2 roadmap, held in May or June 2027.  
 - **Cross-Chain Reference Implementation design**: Messaging Gateway design, choice of the cross-chain messaging provider, and a USDCx integration spike, approved by the Canton Foundation before the Milestone 5 build starts.
 
 **Contracts Library:**
@@ -401,7 +401,7 @@ No backward compatibility impact. The Contracts Library and Reference Implementa
 - Confidential Auction RI demonstrable on LocalNet/DevNet: sealed-bid auction with allocation and settlement visible only to relevant parties.  
 - Token Auctions library components pass \>90% code coverage with full CI integration.  
 - M3 security audit report published with all critical and high findings resolved.  
-- 12-Month Scope Review completed by 30 April 2027, with Year 2 roadmap published and agreed upon with Canton Foundation.  
+- 12-Month Scope Review completed by 15 June 2027, with Year 2 roadmap published and agreed upon with Canton Foundation.  
 - Messaging Gateway design and messaging provider choice approved by the Canton Foundation, and USDCx integration spike report published.
 
 **Adoption Criteria (Year 1):**
@@ -419,8 +419,8 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 5: 14 May to 13 August 2027 |
-| **Submission Date** | 13 August 2027 |
+| **Estimated Delivery** | Quarter 5: 1 July to 30 September 2027 |
+| **Submission Date** | 30 September 2027 |
 | **Focus** | First Year 2 Reference Implementation and cross-chain library |
 
 **Reference Implementations:**
@@ -457,8 +457,8 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 6: 14 August to 13 November 2027 |
-| **Submission Date** | 13 November 2027 |
+| **Estimated Delivery** | Quarter 6: 1 October to 31 December 2027 |
+| **Submission Date** | 31 December 2027 |
 | **Focus** | Second Year 2 Reference Implementation and token utility libraries |
 
 **Reference Implementations:**
@@ -498,8 +498,8 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 7: 14 November 2027 to 13 February 2028 |
-| **Submission Date** | 13 February 2028 |
+| **Estimated Delivery** | Quarter 7: 1 January to 31 March 2028 |
+| **Submission Date** | 31 March 2028 |
 | **Focus** | Third Year 2 Reference Implementation and additional Canton standards |
 
 **Reference Implementations:**
@@ -535,8 +535,8 @@ To support these adoption targets, the Canton Foundation and Digital Asset will 
 
 | Field | Value |
 | :---- | :---- |
-| **Estimated Delivery** | Quarter 8: 14 February to 13 May 2028 (End of Year 2\) |
-| **Submission Date** | 13 May 2028 |
+| **Estimated Delivery** | Quarter 8: 1 April to 30 June 2028 (End of Year 2\) |
+| **Submission Date** | 30 June 2028 |
 | **Focus** | Final Reference Implementation, remaining audits, and Year 2 adoption proof |
 
 **Reference Implementations:**
@@ -647,7 +647,7 @@ Early completion bonuses are mutually exclusive per year.
 
 ## Volatility Stipulation
 
-This proposal spans 24 months, significantly exceeding the 6-month threshold for fixed Canton Coin denomination. To address CC/USD price volatility:
+This proposal spans more than 24 months, significantly exceeding the 6-month threshold for fixed Canton Coin denomination. To address CC/USD price volatility:
 
 - **Quarterly Rebase:** At the beginning of each calendar quarter, the CC amount for that quarter's milestone is recalculated based on the 30-day moving average CC/USD price as of that date using Coingecko.  
 - **Mechanism:** The USD value of each milestone is fixed at grant approval. The CC amount for each milestone is computed by dividing the fixed USD value by the 30-day moving average CC/USD price, sourced from Coingecko, at the start of the quarter in which the milestone is expected to be delivered.  
@@ -660,7 +660,7 @@ OpenZeppelin will issue an invoice on the first day of each calendar quarter for
 
 ## 12-Month Scope Review and Termination Provisions
 
-- **12-Month Scope Review:** In March or April 2027, during Quarter 4, OpenZeppelin and the Canton Foundation will conduct a joint review to align Year 2 priorities with evolving ecosystem needs. Year 2 Reference Implementation topics and any library roadmap adjustments will be agreed upon before Year 2 work begins.  
+- **12-Month Scope Review:** In May or June 2027, during Quarter 4, OpenZeppelin and the Canton Foundation will conduct a joint review to align Year 2 priorities with evolving ecosystem needs. Year 2 Reference Implementation topics and any library roadmap adjustments will be agreed upon before Year 2 work begins.  
 - **No-Fault Termination:** The Foundation maintains the right to terminate the engagement at the end of any quarterly performance period or at the 12-month mark should strategic priorities shift. In this case, OpenZeppelin is compensated for all accepted milestones to date.  
 - **Termination for Breach:** The Foundation may invoke termination if OpenZeppelin fails to remedy a material breach within fifteen (15) business days after receipt of written notice.
 
